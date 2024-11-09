@@ -1,9 +1,11 @@
+```python
 import tkinter as tk
 from tkinter import ttk
 from tkinter import messagebox
-
+```
 
 # Функция для добавления нового студента
+```python
 def add_student():
     # Открываем новое окно для ввода данных
     def save_data():
@@ -46,18 +48,20 @@ def add_student():
 
     button_save = tk.Button(window, text="Сохранить", command=save_data)
     button_save.grid(row=3, columnspan=2, padx=10, pady=5)
-
+```
 
 # Функция для удаления выбранного студента
+```python
 def delete_student():
     selected_item = tree.focus()
     if selected_item:
         tree.delete(selected_item)
     else:
         messagebox.showwarning(title="Предупреждение!", message="Выберите студента для удаления.")
-
+```
 
 # Основная программа
+```python
 root = tk.Tk()
 root.title("IT_Exel.COM")
 root.geometry("700x400")
@@ -79,3 +83,4 @@ for col in columns:
 
 # Запуск основного цикла
 root.mainloop()
+```
